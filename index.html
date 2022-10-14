@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Shoes</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+<body>
+
+    <!-- Nav-Bar -->
+    <header>
+        <a href="#" class="logo">BEST SHOES</a>
+        <ul>
+            <li><a href="#products">Home</a></li>
+            <li><a href="#offer-section">Offer</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <a href="#">
+                <img src="./Images/ShoppingCart.png" alt="ShoppingCart">
+            </a>
+        </ul>
+    </header>
+
+    <!-- Header Section -->
+    <section class="hero-section" id="products">
+      <div class="hero-content">
+          <div class="content">
+              <h1>Sport</h1>
+              <h3>Shoe Store</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, officiis!</p>
+              <a href="#offer-section" class="btn">Offer</a>
+          </div>
+          <div class="hero-image"></div>
+      </div>
+    </section>   
+
+    <!-- Offer Section Adidas -->
+    <section class="offer-section" id="offer-section">
+        <div class="offer-content">
+            <h2>adidas</h2>
+            <h4>SolarGlide 4</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ipsam aliquam ex tempore laborum delectus quia numquam voluptates, assumenda ducimus.</p>
+        </div>
+        <div class="container">
+            <div class="product">
+                <!-- Moving Pictures -->
+                <img src="./Images/Adidas1.png" id="frontImg">
+                <img src="./Images/Adidas2.png" id="backImg">
+                <!--  -->
+                <div class="product-inner" id="productBox">
+                    <div class="product-front">
+                        <div class="product-top">
+                            <h1>adidas</h1>
+                        </div>
+                        <div class="product-bottom">
+                            <p>Adidas Running Shoes</p>
+                            <h2>SolarGlide 4</h2>
+                            <h3>125 <span>€</span></h3>
+                            <button type="button">Add To Cart</button>
+                            <div class="color-select">
+                                <div class="select-item">
+                                    <img src="./Images/Adidas1.png">
+                                </div>
+                                <div class="select-item">
+                                    <img src="./Images/Adidas2.png" onclick="flipRight()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <div class="product-top product-top2">
+                            <h1>adidas</h1>
+                        </div>
+                        <div class="product-bottom">
+                            <p>Adidas Running Shoes</p>
+                            <h2>SolarGlide 4</h2>
+                            <h3>125 <span>€</span></h3>
+                            <button type="button">Add To Cart</button>
+                            <div class="color-select">
+                                <div class="select-item">
+                                    <img src="./Images/Adidas1.png" onclick="flipLeft()">
+                                </div>
+                                <div class="select-item">
+                                    <img src="./Images/Adidas2.png" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-side"></div>
+                    <div class="rightside"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-title">
+            <h2 class="title-text">Contact</h2>
+        </div>       
+            <div class="form">      
+                <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+                <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+                <button type="submit">Submit</button> 
+            </div>  
+    </section>
+    <!-- Footer Section -->
+    <div class="info">
+        <p>Musterstrasse 101 <br> 1120 Vienna</p>
+        <p>+436607654321</p>
+        <p>horvatkristian1@gmail.com</p> 
+    </div> 
+    <section></section>
+        <script src="./JS/main.js"></script>
+</body>
+</html>

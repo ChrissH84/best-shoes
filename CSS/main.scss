@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    background: url(../Images/Background1.jpg) center/cover no-repeat fixed;
+}
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    border-bottom: 1px solid #fff;
+    backdrop-filter: blur(5px);
+}
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+header ul a img {
+    width: 40px;
+    filter: invert(100%);
+    margin-left: 20px;
+}
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 6px 15px; 
+    border-radius: 20px;
+    transition: 0.5s;
+    font-size: 1.2rem;
+}
+header ul li a:hover {
+    background: #fff;
+    color: #8E109C;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    height: 1000px;
+}
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content .content {
+    width: 50%;
+    padding-left: 150px;
+}
+.content h1 {
+    display: inline-block;
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 3px #fff solid;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+.content h3 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+.content p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    margin-right: 100px;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+.hero-content .hero-image {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    margin-top: 50px;
+    background: url(../Images/Nike1.1.png) center/cover no-repeat;
+    backface-visibility: hidden;
+    animation: introload 4s forwards, slideImg 20s infinite 5s; 
+}
+.btn {
+    font-size: 1.2rem;
+    color: #8E109C;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #8E109C;
+    border-radius: 50px;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    margin-top: 30px;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+.btn:hover {
+    letter-spacing: 6px;
+}
+
+/* Offer Section Adidas */
+.offer-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -100px;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.product {
+    width: 400px;
+    height: 550px;
+    perspective: 1000px;
+}
+.product-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+.product-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateZ(25px);
+}
+.product-top {
+    height: 50%;
+    width: 100%;
+    background: url(../Images/BackgroundAdidas.jpg) center/cover no-repeat;
+    color: #fff;
+}
+.product-top h1 {
+    font-size: 100px;
+    margin-left: 20px;
+    font-style: italic;
+    opacity: 0.3;
+}
+.product-bottom {
+    padding: 50px 30px;
+}
+.product-bottom p {
+    font-size: 12px;
+}
+.product-bottom h2 {
+    margin-bottom: 35px;
+    color: #8E109C;
+    letter-spacing: 1px;
+}
+.product-bottom h3 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+}
+.product-bottom h3 span {
+    color: #8E109C;
+}
+.product-bottom button {
+   padding: 9px 25px;
+   background: transparent;
+   color: #8E109C;
+   border: 1px solid #8E109C;
+   border-radius: 30px;
+   outline: none;
+   cursor: pointer;
+   transition: 0.5s;
+}
+button:hover {
+    letter-spacing: 1px;
+}
+.color-select {
+    display: flex;
+    float: right;
+    margin-top: -10px;
+}
+.select-item {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    padding: 5px;
+    box-shadow: -5px 0 8px 2px rgba(156, 216, 244, 0.5);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.select-item:hover{
+    background: rgba(156, 216, 244, 0.5);
+    box-shadow: none;
+    transition: 0.5s;
+}
+.select-item img {
+    width: 80%;
+}
+.product-top2 {
+    background: url(../Images/BackgroundAdidas.jpg); 
+}
+.product-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    transform: translateZ(-25px) rotateY(180deg);
+}
+.left-side, .right-side {
+    width: 50px;
+    height: 100%;
+    background: #fff;
+    transform: rotateY(90deg);
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+.right-side {
+    transform: rotateY(-90deg);
+    left: auto;
+    right: -25px;
+}
+#frontImg {
+    width: 350px;
+    top: -10px;
+    left: 20px;
+    position: absolute;
+    transform: translateZ(50px) rotate(30deg);
+    transition: 1s;
+    z-index: 100;
+}
+#backImg {
+    width: 350px;
+    top: -10px;
+    left: -650px;
+    position: absolute;
+    transform: translateZ(50px);
+    transition: 1s;
+    z-index: 100;
+}
+.offer-content {
+    width: 100%;
+    height: 100vh;
+    padding-top: 250px;
+    padding-left: 130px;
+}
+.offer-content h2 {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.offer-content h4{
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.offer-content p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    margin-right: 100px;
+}
+/* Contact Section */
+.contact-title {
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-title .title-text {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+.form { 
+    max-width:420px; 
+    margin: 50px auto;
+}
+.feedback-input {
+    color: #8E109C;
+    font-weight:500;
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 10px;
+    border: 1px solid #8E109C;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+[type="submit"] {
+    position: relative;
+    font-size: 1rem;
+    color: #8E109C;
+    border-radius: 8px;
+    border: 1px solid #8E109C;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 150px;
+}
+[type="submit"]:hover {
+    letter-spacing: 4px;
+}
+
+/* Footer Section */
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    text-align: center; 
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 100px; 
+    backdrop-filter: blur(4px);
+}
+.info i {
+    color: #fff;
+}
+.info p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+@keyframes slideInFromLeft  {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes introload {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
